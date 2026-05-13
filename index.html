@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <h1>🚗 Vehicle Rental System</h1>
+                </div>
+                <nav class="navbar-menu">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#vehicles">Vehicles</a></li>
+                        <li><a href="#bookings">Bookings</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="user-menu">
+                    <button class="btn btn-secondary">Login</button>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Perfect Ride</h1>
+                <p>Easy and affordable vehicle rental service</p>
+                <button class="btn btn-large">Browse Vehicles</button>
+            </div>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <section class="search-section">
+            <div class="container">
+                <h2>Search Vehicles</h2>
+                <form class="search-form" id="searchForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickupDate">Pickup Date</label>
+                            <input type="date" id="pickupDate" name="pickupDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnDate">Return Date</label>
+                            <input type="date" id="returnDate" name="returnDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicleType">Vehicle Type</label>
+                            <select id="vehicleType" name="vehicleType">
+                                <option value="">All Types</option>
+                                <option value="economy">Economy</option>
+                                <option value="compact">Compact</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="van">Van</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Available Vehicles Section -->
+        <section class="vehicles-section" id="vehicles">
+            <div class="container">
+                <h2>Available Vehicles</h2>
+                <div class="vehicles-grid">
+                    <!-- Vehicle Card 1 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">🚗 Toyota Camry</div>
+                        <div class="vehicle-info">
+                            <h3>Toyota Camry</h3>
+                            <p class="vehicle-type">Sedan</p>
+                            <div class="vehicle-details">
+                                <span>2023 | 15,000 km</span>
+                                <span>5 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="reviews">(42 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$50/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 2 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">🏎️ Honda CR-V</div>
+                        <div class="vehicle-info">
+                            <h3>Honda CR-V</h3>
+                            <p class="vehicle-type">SUV</p>
+                            <div class="vehicle-details">
+                                <span>2023 | 8,500 km</span>
+                                <span>7 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="reviews">(58 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$70/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 3 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">👑 BMW X5</div>
+                        <div class="vehicle-info">
+                            <h3>BMW X5</h3>
+                            <p class="vehicle-type">Luxury SUV</p>
+                            <div class="vehicle-details">
+                                <span>2024 | 2,100 km</span>
+                                <span>5 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="reviews">(35 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$150/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 4 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">⚡ Tesla Model 3</div>
+                        <div class="vehicle-info">
+                            <h3>Tesla Model 3</h3>
+                            <p class="vehicle-type">Electric Sedan</p>
+                            <div class="vehicle-details">
+                                <span>2024 | 5,200 km</span>
+                                <span>5 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="reviews">(28 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$80/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 5 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">🚐 Ford Transit</div>
+                        <div class="vehicle-info">
+                            <h3>Ford Transit</h3>
+                            <p class="vehicle-type">Van</p>
+                            <div class="vehicle-details">
+                                <span>2022 | 12,000 km</span>
+                                <span>9 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="reviews">(45 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$90/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 6 -->
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">🎯 Hyundai Eco Zone</div>
+                        <div class="vehicle-info">
+                            <h3>Hyundai Econmy</h3>
+                            <p class="vehicle-type">Economy</p>
+                            <div class="vehicle-details">
+                                <span>2023 | 25,000 km</span>
+                                <span>5 Seats</span>
+                            </div>
+                            <div class="vehicle-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="reviews">(52 reviews)</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <p class="price">$35/day</p>
+                            </div>
+                            <button class="btn btn-primary btn-block">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Fully Insured</h3>
+                        <p>All vehicles come with comprehensive insurance coverage</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Booking</h3>
+                        <p>Book in just 3 easy steps with instant confirmation</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Best Prices</h3>
+                        <p>Competitive rates with no hidden charges</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>24/7 Support</h3>
+                        <p>Customer service available round the clock</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking-section" id="bookings">
+            <div class="container">
+                <h2>Complete Your Booking</h2>
+                <div class="booking-form-wrapper">
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>License Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="licenseNumber">License Number</label>
+                                    <input type="text" id="licenseNumber" name="licenseNumber" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="licenseExpiry">License Expiry Date</label>
+                                    <input type="date" id="licenseExpiry" name="licenseExpiry" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Rental Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupDateBooking">Pickup Date</label>
+                                    <input type="date" id="pickupDateBooking" name="pickupDateBooking" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="returnDateBooking">Return Date</label>
+                                    <input type="date" id="returnDateBooking" name="returnDateBooking" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vehicleSelect">Select Vehicle</label>
+                                    <select id="vehicleSelect" name="vehicleSelect" required>
+                                        <option value="">-- Select a vehicle --</option>
+                                        <option value="toyota-camry">Toyota Camry - $50/day</option>
+                                        <option value="honda-crv">Honda CR-V - $70/day</option>
+                                        <option value="bmw-x5">BMW X5 - $150/day</option>
+                                        <option value="tesla-model3">Tesla Model 3 - $80/day</option>
+                                        <option value="ford-transit">Ford Transit - $90/day</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="additionalOptions">Additional Options</label>
+                                    <select id="additionalOptions" name="additionalOptions">
+                                        <option value="">-- None --</option>
+                                        <option value="gps">GPS Navigation (+$10/day)</option>
+                                        <option value="baby-seat">Baby Seat (+$5/day)</option>
+                                        <option value="wifi">Mobile Hotspot (+$3/day)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Payment Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="paymentMethod">Payment Method</label>
+                                    <select id="paymentMethod" name="paymentMethod" required>
+                                        <option value="">-- Select payment method --</option>
+                                        <option value="credit-card">Credit Card</option>
+                                        <option value="debit-card">Debit Card</option>
+                                        <option value="net-banking">Net Banking</option>
+                                        <option value="wallet">Digital Wallet</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the terms and conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-large btn-primary">Complete Booking</button>
+                    </form>
+
+                    <!-- Booking Summary -->
+                    <div class="booking-summary">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-item">
+                            <span>Vehicle</span>
+                            <span>Selected Vehicle</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Pickup Date</span>
+                            <span>MM/DD/YYYY</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Return Date</span>
+                            <span>MM/DD/YYYY</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Number of Days</span>
+                            <span>--</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-item summary-subtotal">
+                            <span>Subtotal</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Additional Options</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-item summary-tax">
+                            <span>Tax (10%)</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-item summary-total">
+                            <span>Total</span>
+                            <span class="total-price">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Great service and excellent vehicles. The booking process was smooth and the staff was very helpful!"</p>
+                        <div class="testimonial-author">
+                            <strong>John Smith</strong>
+                            <span>Verified Renter</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Affordable prices and well-maintained cars. I'll definitely rent from them again for my next trip!"</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Johnson</strong>
+                            <span>Verified Renter</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★☆</div>
+                        <p class="testimonial-text">"Good selection of vehicles and competitive pricing. Excellent customer support throughout the rental period."</p>
+                        <div class="testimonial-author">
+                            <strong>Michael Brown</strong>
+                            <span>Verified Renter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>123 Rental Street, City, State 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@vehiclerental.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🕐</span>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>Mon - Sun: 24/7 Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Vehicles</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Booking Guide</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Vehicle Rental System. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
